@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Acessories | GridStore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="range-slider.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="logo">Grid<span>$</span>tore</h2>
+            
+            <ul class="primary-nav">
+                <li><a href="#">Home</a></li>
+                <li><a class="current" href="#">Products</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li id="shopping-cart">
+                    <a href="#"><img src="images/shopping cart.svg" alt="Shopping cart"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="center-child">
+        <main>
+            <h1>Computer Accessories (11)</h1>
+            <div id="shopping-grid">
+                <aside>
+                    <form action="#" aria-label="filter-form">
+                        <div class="form-line">
+                            <label class="grey-body" for="sort">Sort by</label>
+                            <select name="sort" id="sort">
+                                <option value="default">Popular</option>
+                                <option value="price">Price</option>
+                                <option value="name">Name</option>
+                            </select>
+                        </div>    
+                        <hr class="form-hr">
+                        <div class="form-line">
+                            <h3>Price Range</h3>
+                            <button>
+                                <img src="images/arrow-down.svg" alt="Arrow down">
+                            </button>
+                        </div>
+                        <div class="form-line">
+                            <input type="text" id="min-price" name="min" placeholder="$0" value="$0">
+                            <span>-</span>
+                            <input type="text" id="max-price" name="max" placeholder="$1000" value="$1000">
+                        </div>
+                        <div class="range-slider">
+                            <div class="range-slider-fill"></div>
+
+                            <input id="min-range" step="10" type="range" min="0" max="1000">
+                            <input id="max-range" step="10" type="range" min="0" max="1000">
+                        </div>
+                        <hr class="form-hr">
+                        <div class="form-line">
+                            <h3>Brand</h3>
+                            <button>
+                                <img src="images/arrow-down.svg" alt="Arrow down">
+                            </button>
+                        </div>
+                        <div class="checkbox-container">
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">Akake</label>
+                                </div>
+                                <span>1</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">BlueBuilt</label>
+                                </div>
+                                <span>2</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">Glorious</label>
+                                </div>
+                                <span>1</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">HyperX</label>
+                                </div>
+                                <span>1</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">Logitech</label>
+                                </div>
+                                <span>2</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">NexiGo</label>
+                                </div>
+                                <span>1</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">SanDisk</label>
+                                </div>
+                                <span>2</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">Sizuka</label>
+                                </div>
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <hr class="form-hr">
+                        <div class="form-line">
+                            <h3>Category</h3>
+                            <button>
+                                <img src="images/arrow-down.svg" alt="Arrow down">
+                            </button>
+                        </div>
+                        <div class="checkbox-container">
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">Gaming</label>
+                                </div>
+                                <span>3</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">Office</label>
+                                </div>
+                                <span>2</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">Apple</label>
+                                </div>
+                                <span>1</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">Windows</label>
+                                </div>
+                                <span>1</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">Surround Sound</label>
+                                </div>
+                                <span>2</span>
+                            </div>
+                            <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">Storage</label>
+                                </div>
+                                <span>2</span>
+                            </div>
+                        </div>
+                        <hr class="form-hr">
+                        <div class="form-line">
+                            <span>Only in Stock</span>
+                            <button id="slide-btn">
+                                <div class="slide-btn-knob"></div>
+                            </button>
+                        </div>
+                    </form>
+                </aside>
+                <div style="max-width: 100%;">
+                    <nav class="filters-nav">
+                        <img src="images/search-icon.svg" alt="search">
+                        <hr class="filters-hr">
+                        <div class="filters">
+                            <div class="filters-absolute">
+                                <span class="selected-filter">All</span>
+                                <span>Mice</span>
+                                <span>Keyboards</span>
+                                <span>Headsets</span>
+                                <span>USB Sticks</span>
+                                <span>Cables</span>
+                                <span>Webcams</span>
+                                <span>SSD's</span>
+                                <span>Drawing Tablets</span>
+                            </div>
+                            <div class="more-filters-container">
+                                <button>
+                                    <img src="images/arrow-right.svg" alt="show more filters">
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <section id="products-grid">
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/glorious-PC.png);"></figure>
+                            <h3>Glorious PC GMMK Gaming Race Full-Size Keyboard - Gateron Brown, US Layout</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="4.5/5 Stars">
+                                    <div style="width: 90%;"></div>
+                                </figure>
+                                <span>24 reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="current-price">$ 136.85</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/logitech-G915.png);"></figure>
+                            <h3>Logitech G915 Lightspeed Wireless RGB Mechanical Gaming Keyboard GL Tactile</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="4.5/5 Stars">
+                                    <div style="width: 80%;"></div>
+                                </figure>
+                                <span>48 reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="old-price">$ 199.-</span>
+                                        <span class="current-price">$ 126.45</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/bluebuilt-nexum.png);"></figure>
+                            <h3>BlueBuilt Nexum Silent Click Wireless Mouse</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="4.5/5 Stars">
+                                    <div style="width: 90%;"></div>
+                                </figure>
+                                <span>17 reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="old-price"> $34.99</span>
+                                        <span class="current-price">$ 29.99</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/sandisk-64.png);"></figure>
+                            <h3>SanDisk 64 GB Ultra USB 3.0 Flash Drive, Up to 130 MB/s, Pack of 3, Black</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="4.5/5 Stars">
+                                    <div style="width: 70%;"></div>
+                                </figure>
+                                <span>4 reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="current-price">$ 18.99</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/pack-lightning.png);"></figure>
+                            <h3>2 Pack Lightning Cable for iPhone 1M SIZUKA MFi Certified Apple Nylon Charging Cable</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="4.5/5 Stars">
+                                    <div style="width: 90%;"></div>
+                                </figure>
+                                <span>1,957 reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="current-price">$ 7.99</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/bluebuilt-filum.png);"></figure>
+                            <h3>BlueBuilt Filum Silent Wired Mouse 800 - 1600 dpi</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="4/5 Stars">
+                                    <div style="width: 80%;"></div>
+                                </figure>
+                                <span>12 reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="current-price">$ 23.99</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/sandisk-128.png);"></figure>
+                            <h3>SanDisk 128GB Extreme PRO SDXC UHS-I Memory Card - C10, U3, V30, 4K UHD, SD Card</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="5/5 Stars">
+                                    <div style="width: 97%;"></div>
+                                </figure>
+                                <span>29,677 reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="current-price">$ 19.99</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/hyperx.png);"></figure>
+                            <h3>HyperX Cloud II - Gaming Headset, 7.1 Surround Sound, And Memory Foam Ear Pads</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="5/5 Stars">
+                                    <div style="width: 90%;"></div>
+                                </figure>
+                                <span>93,535 reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="old-price">$ 99.99</span>
+                                        <span class="current-price">$ 76.99</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/logitech-brio.png);"></figure>
+                            <h3>Logitech Brio 4K Webcam, Ultra 4K HD Video Calling, Noise-Canceling mic, HD Auto Light Correction</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="4.5/5 Stars">
+                                    <div style="width: 90%;"></div>
+                                </figure>
+                                <span>16,746 reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="old-price">$ 199.99</span>
+                                        <span class="current-price">$ 123.-</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/akake.png);"></figure>
+                            <h3>Akake Cat 8 Ethernet Cable, 3m, Professional LAN Network Cable Shielded on Wall</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="4.5/5 Stars">
+                                    <div style="width: 97%;"></div>
+                                </figure>
+                                <span>287 reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="current-price">$ 10.59</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <figure class="product-image" style="background-image: url(images/nexigo.png);"></figure>
+                            <h3>NexiGo N60 1080P Webcam with Microphone, Adjustable FOV, Zoom, Software Control & Privacy Cover</h3>
+                            <div class="rating">
+                                <figure class="stars" aria-label="4.5/5 Stars">
+                                    <div style="width: 80%;"></div>
+                                </figure>
+                                <span>36,432  reviews</span>
+                            </div>
+                            <div class="bottom-info">
+                                <div class="bottom-info-left">
+                                    <div class="price">
+                                        <span class="old-price">$ 49.99</span>
+                                        <span class="current-price">$ 139.99</span>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <figure></figure>
+                                        <span>Delivered tomorrow</span>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="images/shopping cart.svg" alt="Add to cart">
+                                </button>
+                            </div>
+                        </article>
+
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
