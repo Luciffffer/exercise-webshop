@@ -25,11 +25,8 @@ function validateRangeChange() {
     previousValue.min = minRange.value;
     previousValue.max = maxRange.value;
 
-    console.log(min, max);
-
     // set slider fill
     const leftPercent = min / 10;
-    console.log(leftPercent);
     const rightPercent = max / 10;
 
     rangeFill.style.left = `${leftPercent}%`;
