@@ -118,7 +118,7 @@ If you're stuck feel free to ask me for help.
 <br/>
 <br/>
 
-## |--= LEVEL 2: FILTER BY TYPE ---|
+## |--- LEVEL 2: FILTER BY TYPE ---|
 
 Phew that's done, now things are gonna get more interesting (and maybe a little bit more complex).
 
