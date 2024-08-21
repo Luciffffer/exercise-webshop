@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Acessories | GridStore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/Product.js" defer></script>
+    <script src="js/FiltersRadio.js" defer></script>
+    <script src="js/PriceSlider.js" defer></script>
+    <script src="js/CheckboxFilter.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="logo">Grid<span>$</span>tore</h2>
+            
+            <ul class="primary-nav">
+                <li><a href="#">Home</a></li>
+                <li><a class="current" href="#">Products</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li id="shopping-cart">
+                    <a href="#"><img src="images/shopping-cart.svg" alt="Shopping cart"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="center-child">
+        <main>
+            <h1>Computer Accessories (<span id="product-count"></span>)</h1>
+            <div id="shopping-grid">
+                <aside>
+                    <!-- ASIDE FILTERS (SORT, PRICE RANGE, BRAND, CATEGORY) -->
+                    <form action="#" aria-label="filter-form">
+
+                        <!-- Sort (dropdown) -->
+                        <div class="form-line">
+                            <label class="grey-body" for="sort">Sort by</label>
+                            <select name="sort" id="sort"> 
+                                <option value="popular">Popular</option>
+                                <option value="price">Price</option>
+                                <option value="name">Name</option>
+                            </select>
+                        </div>    
+
+
+                        <hr class="form-hr">
+
+
+                        <!-- price range -->
+                        <!-- This is a more complex component. I recommend skipping over this for now -->
+                        <div class="form-line">
+                            <h3>Price Range</h3>
+                            <button>
+                                <img src="images/arrow-down.svg" alt="Arrow down">
+                            </button>
+                        </div>
+                        <div class="form-line">
+                            <input type="text" id="min-price" name="min" placeholder="$0" value="$0">
+                            <span>-</span>
+                            <input type="text" id="max-price" name="max" placeholder="$1000" value="$1000">
+                        </div>
+                        <div class="range-slider">
+                            <div class="range-slider-fill"></div>
+
+                            <input id="min-range" step="10" type="range" min="0" max="1000">
+                            <input id="max-range" step="10" type="range" min="0" max="1000">
+                        </div>
+
+
+                        <hr class="form-hr">
+
+
+                        <!-- Brand checkboxes -->
+                        <div class="form-line">
+                            <h3>Brand</h3>
+                            <button>
+                                <img src="images/arrow-down.svg" alt="Arrow down">
+                            </button>
+                        </div>
+                        <div class="checkbox-container" id="brand-checkbox-container">
+                           
+                            <!-- 
+                                Once the products are loaded, you gotta add the brands to this container
+                                HTML structure:
+                            -->
+
+                            <!-- <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">SanDisk</label>
+                                </div>
+                                <span>2</span>
+                            </div> -->
+
+                        </div>
+
+
+                        <hr class="form-hr">
+
+
+                        <!-- category checkboxes -->
+                        <div class="form-line">
+                            <h3>Category</h3>
+                            <button>
+                                <img src="images/arrow-down.svg" alt="Arrow down">
+                            </button>
+                        </div>
+                        <div class="checkbox-container" id="category-checkbox-container">
+                            
+                            <!-- Same goes for the category checkboxes as for the brands -->
+                            <!-- Same structure -->
+
+                        </div>
+
+
+                        <hr class="form-hr">
+                        
+                        
+                        <!-- IGNORE (useless and not implemented) -->
+                        <div class="form-line">
+                            <span>Only in Stock</span>
+                            <button id="slide-btn">
+                                <div class="slide-btn-knob"></div>
+                            </button>
+                        </div>
+                    </form>
+                </aside>
+
+                
+                <div style="max-width: 100%;">
+
+                    <!-- FILTER BY TYPE NAVIGATION (ALL, MICE, KEYBOARDS) -->
+                    <nav class="filters-nav">
+                        <img src="images/search-icon.svg" alt="search">
+                        <hr class="filters-hr">
+                        <div class="filters">
+                            <div class="more-filters-container more-filters-left" style="display: none;">
+                                <button>
+                                    <img src="images/arrow-right.svg" style="transform: rotate(180deg);" alt="show more filters">
+                                </button>
+                            </div>
+                            <!-- Radio inputs aka only 1 can be selected -->
+                            <!-- The green light up when selected is pure CSS & HTML -->
+                            <!-- When you click on one of the inputs, the attribute checked gets added -->
+                            <div class="filters-absolute">
+                                <input checked type="radio" name="filter" id="filter-all">
+                                <label for="filter-all">All</label>
+
+                                <input type="radio" name="filter" id="filter-mice">
+                                <label for="filter-mice">Mice</label>
+
+                                <input type="radio" name="filter" id="filter-keyboards">
+                                <label for="filter-keyboards">Keyboards</label>
+
+                                <input type="radio" name="filter" id="filter-headsets">
+                                <label for="filter-headsets">Headsets</label>
+
+                                <input type="radio" name="filter" id="filter-usb-sticks">
+                                <label for="filter-usb-sticks">USB Sticks</label>
+
+                                <input type="radio" name="filter" id="filter-cables">
+                                <label for="filter-cables">Cables</label>
+
+                                <input type="radio" name="filter" id="filter-webcams">
+                                <label for="filter-webcams">Webcams</label>
+
+                                <input type="radio" name="filter" id="filter-ssds">
+                                <label for="filter-ssds">SSD's</label>
+
+                                <input type="radio" name="filter" id="filter-drawing-tablets">
+                                <label for="filter-drawing-tablets">Drawing Tablets</label>
+                            </div>
+                            <div class="more-filters-container more-filters-right">
+                                <button>
+                                    <img src="images/arrow-right.svg" alt="show more filters">
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- 
+                        Loading spinner (displayed while products are not loaded)
+                        thus after you add the products initially, you can hide this (display: none)
+                    -->
+                    <div id="loader">
+                        <div id="spinner"></div>
+                        <p>loading products</p>
+                    </div>
+
+                    <!-- 
+                        Finally the products grid
+                        This is where the products will be added
+                        The products are loaded in main.js by javascript
+                        You need to write the javascript to add the products to the grid
+                      -->
+                    <section id="products-grid">
+
+                        <!-- Structure as below: -->
+
+                        <!-- 
+                            <article>
+
+                                <figure class="product-image" style="background-image: url(images/bluebuilt-filum.png);"></figure>
+
+                                <h3>BlueBuilt Filum Silent Wired Mouse 800 - 1600 dpi</h3>
+
+                                <div class="rating">
+                                    <figure class="stars" aria-label="4/5 Stars">
+                                        <div style="width: 80%;"></div>
+                                    </figure>
+                                    <span>12 reviews</span>
+                                </div>
+
+                                <div class="bottom-info">
+                                    <div class="bottom-info-left">
+                                        <div class="price">
+                                            <span class="current-price">$ 23.99</span>
+                                        </div>
+                                        <div class="delivery-info">
+                                            <figure></figure>
+                                            <span>Delivered tomorrow</span>
+                                        </div>
+                                    </div>
+                                    <button>
+                                        <img src="images/shopping cart.svg" alt="Add to cart">
+                                    </button>
+                                </div>
+
+                            </article> 
+                        -->
+
+
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

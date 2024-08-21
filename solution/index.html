@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Acessories | GridStore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/Product.js" defer></script>
+    <script src="js/FiltersRadio.js" defer></script>
+    <script src="js/PriceSlider.js" defer></script>
+    <script src="js/CheckboxFilter.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="logo">Grid<span>$</span>tore</h2>
+            
+            <ul class="primary-nav">
+                <li><a href="#">Home</a></li>
+                <li><a class="current" href="#">Products</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li id="shopping-cart">
+                    <a href="#"><img src="images/shopping-cart.svg" alt="Shopping cart"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="center-child">
+        <main>
+            <h1>Computer Accessories (<span id="product-count"></span>)</h1>
+            <div id="shopping-grid">
+                <aside>
+                    <form action="#" aria-label="filter-form">
+
+                        <!-- Sort -->
+                        <div class="form-line">
+                            <label class="grey-body" for="sort">Sort by</label>
+                            <select name="sort" id="sort">
+                                <option value="popular">Popular</option>
+                                <option value="price">Price</option>
+                                <option value="name">Name</option>
+                            </select>
+                        </div>    
+
+
+                        <hr class="form-hr">
+
+                        <!-- price range -->
+                        <div class="form-line">
+                            <h3>Price Range</h3>
+                            <button>
+                                <img src="images/arrow-down.svg" alt="Arrow down">
+                            </button>
+                        </div>
+                        <div class="form-line">
+                            <input type="text" id="min-price" name="min" placeholder="$0" value="$0">
+                            <span>-</span>
+                            <input type="text" id="max-price" name="max" placeholder="$1000" value="$1000">
+                        </div>
+                        <div class="range-slider">
+                            <div class="range-slider-fill"></div>
+
+                            <input id="min-range" step="10" type="range" min="0" max="1000">
+                            <input id="max-range" step="10" type="range" min="0" max="1000">
+                        </div>
+
+
+                        <hr class="form-hr">
+
+                        <!-- Brand checkboxes -->
+                        <div class="form-line">
+                            <h3>Brand</h3>
+                            <button>
+                                <img src="images/arrow-down.svg" alt="Arrow down">
+                            </button>
+                        </div>
+                        <div class="checkbox-container" id="brand-checkbox-container">
+                           
+                            <!-- 
+                                Example of a checkbox element
+                            -->
+
+                            <!-- <div class="form-line checkbox">
+                                <div>
+                                    <input type="checkbox" id="brand1" name="brand1" value="brand1">
+                                    <label for="brand1">SanDisk</label>
+                                </div>
+                                <span>2</span>
+                            </div> -->
+
+                        </div>
+
+
+                        <hr class="form-hr">
+
+                        <!-- category checkboxes (idem as brand) -->
+                        <div class="form-line">
+                            <h3>Category</h3>
+                            <button>
+                                <img src="images/arrow-down.svg" alt="Arrow down">
+                            </button>
+                        </div>
+                        <div class="checkbox-container" id="category-checkbox-container">
+                            
+                        </div>
+
+
+                        <hr class="form-hr">
+                        
+                        
+                        <div class="form-line">
+                            <span>Only in Stock</span>
+                            <button id="slide-btn">
+                                <div class="slide-btn-knob"></div>
+                            </button>
+                        </div>
+                    </form>
+                </aside>
+
+                
+                <div style="max-width: 100%;">
+
+                    <!-- Filter by type -->
+                    <nav class="filters-nav">
+                        <img src="images/search-icon.svg" alt="search">
+                        <hr class="filters-hr">
+                        <div class="filters">
+                            <div class="more-filters-container more-filters-left" style="display: none;">
+                                <button>
+                                    <img src="images/arrow-right.svg" style="transform: rotate(180deg);" alt="show more filters">
+                                </button>
+                            </div>
+                            <div class="filters-absolute">
+                                <input checked type="radio" name="filter" id="filter-all">
+                                <label for="filter-all">All</label>
+
+                                <input type="radio" name="filter" id="filter-mice">
+                                <label for="filter-mice">Mice</label>
+
+                                <input type="radio" name="filter" id="filter-keyboards">
+                                <label for="filter-keyboards">Keyboards</label>
+
+                                <input type="radio" name="filter" id="filter-headsets">
+                                <label for="filter-headsets">Headsets</label>
+
+                                <input type="radio" name="filter" id="filter-usb-sticks">
+                                <label for="filter-usb-sticks">USB Sticks</label>
+
+                                <input type="radio" name="filter" id="filter-cables">
+                                <label for="filter-cables">Cables</label>
+
+                                <input type="radio" name="filter" id="filter-webcams">
+                                <label for="filter-webcams">Webcams</label>
+
+                                <input type="radio" name="filter" id="filter-ssds">
+                                <label for="filter-ssds">SSD's</label>
+
+                                <input type="radio" name="filter" id="filter-drawing-tablets">
+                                <label for="filter-drawing-tablets">Drawing Tablets</label>
+                            </div>
+                            <div class="more-filters-container more-filters-right">
+                                <button>
+                                    <img src="images/arrow-right.svg" alt="show more filters">
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- 
+                        Loading spinner (displayed while products are not loaded)
+                        thus hide when products are added to the grid
+                    -->
+                    <div id="loader">
+                        <div id="spinner"></div>
+                        <p>loading products</p>
+                    </div>
+
+                    <!-- 
+                        Container for the products
+                      -->
+                    <section id="products-grid">
+
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+[
+    {
+        "id": 1,
+        "name": "Glorious PC GMMK Gaming Race Full-Size Keyboard - Gateron Brown, US Layout",
+        "type": "keyboards",
+        "brand": "Glorious",
+        "category": ["gaming"],
+        "picture": "images/glorious-PC.png",
+        "reviewCount": 24,
+        "rating": 4.5,
+        "price": 136.85
+    },
+    {
+        "id": 2,
+        "name": "Logitech G915 Lightspeed Wireless RGB Mechanical Gaming Keyboard GL Tactile",
+        "type": "keyboards",
+        "brand": "Logitech",
+        "category": ["gaming"],
+        "picture": "images/logitech-G915.png",
+        "reviewCount": 48,
+        "rating": 4,
+        "price": 199,
+        "discountedPrice": 126.45
+    },
+    {
+        "id": 3,
+        "name": "BlueBuilt Nexum Silent Click Wireless Mouse",
+        "type": "mice",
+        "brand": "BlueBuilt",
+        "category": ["office"],
+        "picture": "images/bluebuilt-nexum.png",
+        "reviewCount": 17,
+        "rating": 4.5,
+        "price": 34.99,
+        "discountedPrice": 29.99
+    },
+    {
+        "id": 4,
+        "name": "SanDisk 64 GB Ultra USB 3.0 Flash Drive, Up to 130 MB/s, Pack of 3, Black",
+        "type": "usb sticks",
+        "brand": "SanDisk",
+        "category": ["storage"],
+        "picture": "images/sandisk-64.png",
+        "reviewCount": 4,
+        "rating": 3.5,
+        "price": 18.99
+    },
+    {
+        "id": 5,
+        "name": "2 Pack Lightning Cable for iPhone 1M SIZUKA MFi Certified Apple Nylon Charging Cable",
+        "type": "cables",
+        "brand": "Sizuka",
+        "category": ["apple"],
+        "picture": "images/pack-lightning.png",
+        "reviewCount": 1957,
+        "rating": 4.5,
+        "price": 7.99
+    },
+    {
+        "id": 6,
+        "name": "BlueBuilt Filum Silent Wired Mouse 800 - 1600 dpi",
+        "type": "mice",
+        "brand": "BlueBuilt",
+        "category": ["office"],
+        "picture": "images/bluebuilt-filum.png",
+        "reviewCount": 12,
+        "rating": 4,
+        "price": 23.99
+    },
+    {
+        "id": 7,
+        "name": "SanDisk 128GB Extreme PRO SDXC UHS-I Memory Card - C10, U3, V30, 4K UHD, SD Card",
+        "type": "ssd's",
+        "brand": "SanDisk",
+        "category": ["storage"],
+        "picture": "images/sandisk-128.png",
+        "reviewCount": 29677,
+        "rating": 5,
+        "price": 19.99
+    },
+    {
+        "id": 8,
+        "name": "HyperX Cloud II - Gaming Headset, 7.1 Surround Sound, And Memory Foam Ear Pads",
+        "type": "headsets",
+        "brand": "HyperX",
+        "category": ["gaming", "surround sound"],
+        "picture": "images/hyperx.png",
+        "reviewCount": 93535,
+        "rating": 4.5,
+        "price": 99.99,
+        "discountedPrice": 76.99
+    },
+    {
+        "id": 9,
+        "name": "Logitech Brio 4K Webcam, Ultra 4K HD Video Calling, Noise-Canceling mic, HD Auto...",
+        "type": "webcams",
+        "brand": "Logitech",
+        "category": ["office"],
+        "picture": "images/logitech-brio.png",
+        "reviewCount": 16746,
+        "rating": 4.5,
+        "price": 199.99,
+        "discountedPrice": 123
+    },
+    {
+        "id": 10,
+        "name": "Akake Cat 8 Ethernet Cable, 3m, Professional LAN Network Cable Shielded on Wall",
+        "type": "cables",
+        "brand": "Akake",
+        "category": ["office"],
+        "picture": "images/akake.png",
+        "reviewCount": 287,
+        "rating": 5,
+        "price": 10.59
+    },
+    {
+        "id": 11,
+        "name": "NexiGo N60 1080P Webcam with Microphone, Adjustable FOV, Zoom, Software Control...",
+        "type": "webcams",
+        "brand": "NexiGo",
+        "category": ["office"],
+        "picture": "images/nexigo.png",
+        "reviewCount": 36432,
+        "rating": 4,
+        "price": 139.99,
+        "discountedPrice": 49.99
+    }
+]

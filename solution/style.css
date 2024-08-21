@@ -345,29 +345,47 @@ input[type="checkbox"]:checked {
     align-items: center;
     gap: var(--size-3);
     position: absolute;
+    transition: transform 0.3s ease-in-out;
 }
 
-.filters span {
+.filters label {
     width: max-content;
     font-weight: 700;
     font-size: var(--body);
     color: var(--black);
     padding: var(--size-1) var(--size-2);
+    cursor: pointer;
 }
 
-.selected-filter {
+.filters input {
+    display: none;
+}
+
+.filters input:checked + label {
     background-color: var(--primary-bright);
     border-radius: 100px;
 }
 
-.more-filters-container {
+.more-filters-right {
     display: flex;
     align-items: center;
     justify-content: right;
     position: absolute;
     width: calc(var(--size-4) * 2);
     right: 0;
+    z-index: 10;
     background: linear-gradient(270deg, rgba(255,255,255,1) 35%, rgba(255,255,255,0) 100%);
+}
+
+.more-filters-left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: absolute;
+    width: calc(var(--size-4) * 2);
+    left: 0;
+    z-index: 10;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(255,255,255,0) 100%);
 }
 
 .more-filters-container > button {
@@ -498,6 +516,69 @@ article > h3 {
     color: var(--grey);
     text-decoration: line-through;
     margin-right: var(--size-1);
+}
+
+
+/* LOADER */
+
+#loader {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader > p {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#spinner {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background-color: var(--blue-grey);
+    position: relative;
+}
+
+#spinner::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background: conic-gradient(var(--primary-bright) 0% 25%, var(--blue-grey) 25% 100%);
+    animation: spin 1.5s linear infinite;
+}
+
+#spinner::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background-color: var(--white);
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (max-width: 1000px) {
