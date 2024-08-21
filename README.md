@@ -25,6 +25,8 @@ Try clicking on the different filters and so on.
 
 Keep in mind not everything is implemented (only in stock, closing filter windows ...)
 
+<br/>
+
 
 ### Step 2: Learn the HTML structure
 
@@ -33,6 +35,8 @@ Take a look at the structure. You don't have to understand everything, but I've 
 Familiarize yourself a little bit. A good understanding of the structure goes a long way.
 
 **You will not have to edit the HTML or CSS files. Only the .js files in the js folder**
+
+<br/>
 
 
 ### Step 3: Learn the Javascript structure
@@ -46,17 +50,23 @@ If you want to do a completely different approach feel free. Anything is allowed
 
 ## |--- LEVEL 1: DISPLAY THE PRODUCTS ---|
 
-Currently there's a loader displayed. We don't want that, we want the products.
+Currently, there's a loader displayed. We don't want that, we want the products.
+
+<br/>
+
 
 ### Step 1: Product.js destructure product object
 
-After we have received the product objects in main.js, they are being passed to the Product.js class.
+After we have received the product objects in main.js, they are passed to the Product.js class.
 It is now your task to turn all those product object properties into attributes of the class.
 
 Check the product.json file to see the structure of one of those objects.
-If you're unfamiliar with json, don't worry it's just a regular javascript object.
+If you're unfamiliar with JSON, don't worry it's just a regular JavaScript object.
 
 > hint: this.name = productObj.name
+
+<br/>
+
 
 ### Step 2: Generate the HTML and store it as the article attribute
 
@@ -97,18 +107,24 @@ There are some helper methods provided in Product.js to format numbers and price
 </article> 
 ```
 
-> hint: You don't need to save any other attribute in #generateHTML other than this.article. By using article.appendChild() we can build a small DOM tree all stored in this.article. If we want to display that article tree we made, all we gotta do is add it somewhere in the main HTML tree. E.g. document.body.appendChild(product1.article)
+> hint: You don't need to save any attribute in #generateHTML other than this.article. By using article.appendChild() we can build a small DOM tree all stored in this.article. If we want to display that article tree we made, all we gotta do is add it somewhere in the main HTML tree. E.g. document.body.appendChild(product1.article)
+
+<br/>
+
 
 ### Step 3: Display the products
 
-Finally it's time to display the products!
+Finally, it's time to display the products!
 
-In our main.js file we have a method called displayProducts(). Simply add all the products in this.originalProducts to this.productsContainer, and boom we can see them!
+In our main.js file, we have a method called displayProducts(). Simply add all the products in this.originalProducts to this.productsContainer, and boom we can see them!
 
 Remember to call the method somewhere and also hide the loader.
-Futhermore, if you dare, also update the span with `id="product-count"`.
+Furthermore, if you dare, also update the span with `id="product-count"`.
 
 > hint: Call the method displayProducts() at the end of startUp() because startUp is async.
+
+<br/>
+
 
 ### CONGRATS LEBEL 1 COMPLETE!
 
@@ -121,7 +137,10 @@ If you're stuck feel free to ask me for help.
 ## |--- LEVEL 2: FILTER BY TYPE ---|
 
 Phew that's done, now things are gonna get more interesting (and maybe a little bit more complex).
-For this level we're gonna be editing main.js and FiltersRadio.js.
+For this level, we're gonna be editing main.js and FiltersRadio.js.
+
+<br/>
+
 
 ### Step 1: Add horizontal scroll with buttons functionality to the Type Filters
 
@@ -130,25 +149,50 @@ Edit the #addScroll() and #setScrollButtonDisplay() methods for this one.
 #addScroll() moves this.filtersList left or right depending on the button clicked. This requires a little math to figure out how far to move the element.
 
 > Hint1: Use the transform CSS property to move filtersList left or right
+
 > Hint2: Use this.filtersParent.offsetWidth as a basis to figure out how far left or right to move this.filtersList
+
 > hint3: Use an if statement to limit how far left or right this.filtersList is allowed to move
+
+<br/>
+
 
 #setScrollButtonDisplay() displays the left or right button depending on the position of this.filtersList.
 
 > Hint4: call #setScrollButtonDisplay() after every click on a button (aka after the position of filtersList has been updated)
 
+<br/>
+
+
 ### Step 2: checkedValue getter needs to return the value of the currently selected input
 
-Title explains it.
+The title explains it.
 
 > Hint: if a radio input is selected it is, in CSS terms, checked
 
-> Solution1: `return this.filtersList.querySelector('input:checked').labels[0].textContent.toLowerCase();`
-> solution2: `return this.filtersList.querySelector('input:checked').id.split('-')[1]`
+<br/>
+
+<details>
+    <summary>Solution 1</summary>
+    
+    return this.filtersList.querySelector('input:checked').labels[0].textContent.toLowerCase();
+</details>
+
+<details>
+    <summary>Solution 2</summary>
+    
+    
+    return return this.filtersList.querySelector('input:checked').id.split('-')[1];
+</details>
+
+<br/>
+
 
 ### Step 3: Filter time
 
-Okay so we hopefully got a working filter select thingie rn. Now it's time to actually, u know, filter the products.
+Okay, so we hopefully got a working filter select thingie rn. Now it's time to actually, u know, filter the products.
+
+**WORK IN PROGRESS**
 
 <br/>
 <br/>
@@ -169,7 +213,7 @@ Sooo if you wanna flex try to build this, but don't be discouraged if you're stu
 <br/>
 <br/>
 
-## |--- CORNER FOR PEOPLE THAT ARE STUCK ---|
+## |--- CORNER FOR PEOPLE WHO ARE STUCK ---|
 
 🙏🙏🙏🙏🙏🙏🙏🙏🙏 shrok 🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏
 
