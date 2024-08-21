@@ -10,7 +10,7 @@ to learn that in school. Thus, we're gonna do it the long and imperative way.
 
 I've split this exercise into different levels based on what I think is easier and harder. See how far you can get!
 
-Tip: sometimes things seem really big and complex. Write down the logic with comments first. Start small, don't overdo it. Build up slowly.
+> Tip: sometimes things seem really big and complex. Write down the logic with comments first. Start small, don't overdo it. Build up slowly.
 
 
 <br/>
