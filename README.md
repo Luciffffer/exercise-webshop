@@ -1,6 +1,6 @@
-Hello there!
+### Javascript Exercise Webstore
 
-In this excersise it's your task to try and make the webshop interactive. Aka: make the filters work and the products show up.
+In this exercise, it's your task to make the webshop interactive. Aka: make the filters work and the products show up.
 Now, I'll admit, this is not the easiest. So don't be worried if some things don't work.
 
 This is also actually something you would most likely do in a framework like React, but sadly enough you'll have to wait until year 3
