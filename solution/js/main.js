@@ -47,8 +47,9 @@ class ProductManager {
     #filterProducts() {
         this.filteredProducts = this.originalProducts;
 
-        if (this.typeFilter.checkedValue.toUpperCase() !== 'ALL') {
-            this.filteredProducts = this.filteredProducts.filter(product => product.type.toUpperCase() === this.typeFilter.checkedValue.toUpperCase());
+        if (this.typeFilter.checkedValue.toLowerCase() !== 'all') {
+            const type = this.typeFilter.checkedValue;
+            this.filteredProducts = this.filteredProducts.filter(product => product.type.toLowerCase() === type);
         }
 
         const { min, max } = this.priceSlider.values;

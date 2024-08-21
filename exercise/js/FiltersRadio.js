@@ -5,56 +5,32 @@ class FiltersRadio {
         this.filtersList = filtersList;
         this.filtersParent = filtersParent;
 
-        this.addScroll();
+        this.#addScroll();
     }
 
-    addScroll() {
-        this.rightButton.addEventListener('click', () => {
-            const currentPos = parseFloat(this.filtersList.style.transform.match(/-?\d+/)) || 0;
-            let newPos = currentPos - this.filtersParent.offsetWidth * 0.8;
+    // <---- start editing here ---->
 
-            // limit newPos
-            if (this.filtersList.offsetWidth + newPos < this.filtersParent.offsetWidth) {
-                newPos = this.filtersParent.offsetWidth - this.filtersList.offsetWidth;
-            }
+    #addScroll() {
+        
+        // use event listeners to add scroll functionality with the right and left buttons
 
-            this.filtersList.style.transform = `translateX(${newPos}px`;
-
-            this.#setScrollButtonDisplay(newPos);
-        });
-
-        this.leftButton.addEventListener('click', () => {
-            const currentPos = parseFloat(this.filtersList.style.transform.match(/-?\d+/)) || 0;
-            let newPos = currentPos + this.filtersParent.offsetWidth * 0.8;
-
-            // limit newPos
-            if (newPos > 0) {
-                newPos = 0;
-            }
-
-            this.filtersList.style.transform = `translateX(${newPos}px`;
-
-            this.#setScrollButtonDisplay(newPos);
-        });
     }
 
     #setScrollButtonDisplay(currentPos) {
-        if (currentPos < 0) {
-            this.leftButton.style.display = 'flex';
-        } else {
-            this.leftButton.style.display = 'none';
-        }
+        
+        // based on the current position of the filters list, show or hide the right and left buttons
+        // hint: display is either 'flex' or 'none'
 
-        if (this.filtersList.offsetWidth + currentPos > this.filtersParent.offsetWidth) {
-            this.rightButton.style.display = 'flex';
-        } else {
-            this.rightButton.style.display = 'none';
-        }
     }
 
     get checkedValue() {
-        return this.filtersList.querySelector('input:checked').labels[0].textContent.toLowerCase();
+        
+        // return the value of the checked radio button
+        // hint: every input element has a .labels property that contains the labels linked to the input element. this is handy for getting the text of the label
+
     }
+
+    // <---- end editing here ---->
 }
 
 const rightButton = document.querySelector('.more-filters-right');

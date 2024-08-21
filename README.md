@@ -121,12 +121,57 @@ If you're stuck feel free to ask me for help.
 ## |--- LEVEL 2: FILTER BY TYPE ---|
 
 Phew that's done, now things are gonna get more interesting (and maybe a little bit more complex).
+For this level we're gonna be editing main.js and FiltersRadio.js.
 
-### Step 1: 
+### Step 1: Add horizontal scroll with buttons functionality to the Type Filters
 
+Edit the #addScroll() and #setScrollButtonDisplay() methods for this one.
 
+#addScroll() moves this.filtersList left or right depending on the button clicked. This requires a little math to figure out how far to move the element.
 
-shrok
+> Hint1: Use the transform CSS property to move filtersList left or right
+> Hint2: Use this.filtersParent.offsetWidth as a basis to figure out how far left or right to move this.filtersList
+> hint3: Use an if statement to limit how far left or right this.filtersList is allowed to move
+
+#setScrollButtonDisplay() displays the left or right button depending on the position of this.filtersList.
+
+> Hint4: call #setScrollButtonDisplay() after every click on a button (aka after the position of filtersList has been updated)
+
+### Step 2: checkedValue getter needs to return the value of the currently selected input
+
+Title explains it.
+
+> Hint: if a radio input is selected it is, in CSS terms, checked
+
+> Solution1: `return this.filtersList.querySelector('input:checked').labels[0].textContent.toLowerCase();`
+> solution2: `return this.filtersList.querySelector('input:checked').id.split('-')[1]`
+
+### Step 3: Filter time
+
+Okay so we hopefully got a working filter select thingie rn. Now it's time to actually, u know, filter the products.
+
+<br/>
+<br/>
+
+## |--- LEVEL 1000 MAFIA BOSS ---|
+
+Make the PriceSlider x.
+
+Make it work, make it filter, all that stuff.
+
+This is pretty much a completely custom component that doesn't really rely on any built-in HTML solutions besides the range input type.
+It is therefore a little bit more complex to make work. It doesn't require a lot of code, but might take some thinking.
+
+Sooo if you wanna flex try to build this, but don't be discouraged if you're stuck. My solution is available too.
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+## |--- CORNER FOR PEOPLE THAT ARE STUCK ---|
+
+🙏🙏🙏🙏🙏🙏🙏🙏🙏 shrok 🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏
 
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠴⠊⠉⠀⠀⠀⠀⠀⠀⠈⠁⠢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
