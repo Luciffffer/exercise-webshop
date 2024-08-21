@@ -1,6 +1,6 @@
 ![Example image](solution/images/preview.png)
 
-# Javascript Exercise Webstore
+# Javascript Exercise Webstore 🤯
 
 In this exercise, it's your task to make the webshop interactive. Aka: make the filters work and the products show up.
 Now, I'll admit, this is not the easiest. So don't be worried if some things don't work.
@@ -18,7 +18,7 @@ Tip: sometimes things seem really big and complex. Write down the logic with com
 
 ## |--- LEVEL 0: FAMILIARIZE ---|
 
-### Step 1:
+### Step 1: Look at the working version
 
 Open the HTML file in the solution folder in your browser and take a look. This is ideally how everything should work.
 Try clicking on the different filters and so on.
@@ -26,7 +26,7 @@ Try clicking on the different filters and so on.
 Keep in mind not everything is implemented (only in stock, closing filter windows ...)
 
 
-### Step 2:
+### Step 2: Learn the HTML structure
 
 Open the exercise HTML file in your IDE (VS Code, IntelliJ ...).
 Take a look at the structure. You don't have to understand everything, but I've written comments near the important parts.
@@ -35,7 +35,7 @@ Familiarize yourself a little bit. A good understanding of the structure goes a 
 **You will not have to edit the HTML or CSS files. Only the .js files in the js folder**
 
 
-### Step 3:
+### Step 3: Learn the Javascript structure
 
 Take a look at the Javascript in the exercise folder. I used an OOP approach and gave you some templates to start.
 If you want to do a completely different approach feel free. Anything is allowed.
@@ -46,8 +46,83 @@ If you want to do a completely different approach feel free. Anything is allowed
 
 ## |--- LEVEL 1: DISPLAY THE PRODUCTS ---|
 
+Currently there's a loader displayed. We don't want that, we want the products.
+
+### Step 1: Product.js destructure product object
+
+After we have received the product objects in main.js, they are being passed to the Product.js class.
+It is now your task to turn all those product object properties into attributes of the class.
+
+Check the product.json file to see the structure of one of those objects.
+If you're unfamiliar with json, don't worry it's just a regular javascript object.
+
+> hint: this.name = productObj.name
+
+### Step 2: Generate the HTML and store it as the article attribute
+
+Use the attributes we defined in the previous step to make the following HTML structure with pure JS.
+(yes it's a lot of work).
+
+There are some helper methods provided in Product.js to format numbers and prices.
+
+```html
+<article>
+
+    <figure class="product-image" style="background-image: url(images/bluebuilt-filum.png);"></figure>
+
+    <h3>BlueBuilt Filum Silent Wired Mouse 800 - 1600 dpi</h3>
+
+    <div class="rating">
+        <figure class="stars" aria-label="4/5 Stars">
+            <div style="width: 80%;"></div>
+        </figure>
+        <span>12 reviews</span>
+    </div>
+
+    <div class="bottom-info">
+        <div class="bottom-info-left">
+            <div class="price">
+                <span class="current-price">$ 23.99</span>
+            </div>
+            <div class="delivery-info">
+                <figure></figure>
+                <span>Delivered tomorrow</span>
+            </div>
+        </div>
+        <button>
+            <img src="images/shopping cart.svg" alt="Add to cart">
+        </button>
+    </div>
+
+</article> 
+```
+
+> hint: You don't need to save any other attribute in #generateHTML other than this.article. By using article.appendChild() we can build a small DOM tree all stored in this.article. If we want to display that article tree we made, all we gotta do is add it somewhere in the main HTML tree. E.g. document.body.appendChild(product1.article)
+
+### Step 3: Display the products
+
+Finally it's time to display the products!
+
+In our main.js file we have a method called displayProducts(). Simply add all the products in this.originalProducts to this.productsContainer, and boom we can see them!
+
+Remember to call the method somewhere and also hide the loader.
+Futhermore, if you dare, also update the span with `id="product-count"`.
+
+> hint: Call the method displayProducts() at the end of startUp() because startUp is async.
+
+### CONGRATS LEBEL 1 COMPLETE!
+
+If you're stuck feel free to ask me for help.
 
 
+<br/>
+<br/>
+
+## |--= LEVEL 2: FILTER BY TYPE ---|
+
+Phew that's done, now things are gonna get more interesting (and maybe a little bit more complex).
+
+### Step 1: 
 
 
 

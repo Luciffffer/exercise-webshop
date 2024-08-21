@@ -3,32 +3,28 @@
 class ProductManager {
     
 
-    // You might need to add some things here
+    // <----- start editing here ----->
+
     constructor() {
         this.productsContainer = document.querySelector('#products-grid');
-        this.originalProducts = [];
+        this.originalProducts = []; // array of product class instances. Never edit this array
 
         this.#startUp();
     }
 
-
-    // You might need to add some things here
     async #startUp() {
 
-        // This fetches the products from the JSON file. Don't touch
-        const data = await fetch(`${window.location.origin}/excersise/js/products.json`);
+        // <----- don't edit this ----->
+        const data = await fetch(`${window.location.origin}/exercise/js/products.json`);
         const productsData = await data.json();
         
         productsData.forEach(product => {
-            // we create a new product object and push it to the originalProducts array
-            // note that we pass the product object to the Product class
-            this.originalProducts.push(new Product(product));
+            this.originalProducts.push(new Product(product)); // passed product object to Product class
         });
+        // <----- end don't edit this ----->
 
-        this.#filterProducts();
+        
         this.#addEventListeners();
-
-        document.querySelector('#loader').style.display = 'none';
     }
 
     #addEventListeners() {
@@ -38,18 +34,20 @@ class ProductManager {
     }
 
     #filterProducts() {
+
         // Put your filter logic here
+  
     }
 
     #displayProducts() {
-        this.productsContainer.innerHTML = '';
+        
+        // add products to this.productsContainer.
 
-        this.filteredProducts.forEach(product => {
-            this.productsContainer.appendChild(product.article);
-        });
-
-        document.querySelector('#product-count').textContent = this.filteredProducts.length;
     }
+
+    // <----- end editing here ----->
+
+
 }
 
 const productManager = new ProductManager();
