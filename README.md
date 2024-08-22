@@ -107,7 +107,7 @@ There are some helper methods provided in Product.js to format numbers and price
 </article> 
 ```
 
-> hint: You don't need to save any attribute in #generateHTML other than this.article. By using article.appendChild() we can build a small DOM tree all stored in this.article. If we want to display that article tree we made, all we gotta do is add it somewhere in the main HTML tree. E.g. document.body.appendChild(product1.article)
+> hint: You don't need to save any attribute in #generateHTML other than this.article. By using article.appendChild() or something similar we can build a small DOM tree all stored in this.article. If we want to display that article tree we made, all we gotta do is add it somewhere in the main HTML tree. E.g. document.body.appendChild(product1.article)
 
 <br/>
 
@@ -126,7 +126,7 @@ Furthermore, if you dare, also update the span with `id="product-count"`.
 <br/>
 
 
-### CONGRATS LEBEL 1 COMPLETE!
+### CONGRATS LEVEL 1 COMPLETE!
 
 If you're stuck feel free to ask me for help.
 
